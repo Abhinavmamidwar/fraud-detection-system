@@ -1,0 +1,8 @@
+{
+  "amount": 2500,
+  "oldbalanceOrg": 5000,
+  "newbalanceOrig": 2500,
+  "oldbalanceDest": 10000,
+  "newbalanceDest": 12500,
+  "type": "TRANSFER"
+}

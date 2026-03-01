@@ -2,13 +2,26 @@ from pydantic import BaseModel
 from typing import List
 
 
-class TransactionData(BaseModel):
-    step: int
-    type: str
+class Transaction(BaseModel):
     amount: float
-    nameOrig: str
     oldbalanceOrg: float
-    nameDest: str
+    newbalanceOrig: float
+    oldbalanceDest: float
+    newbalanceDest: float
+    type: str
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "amount": 2500,
+                "oldbalanceOrg": 5000,
+                "newbalanceOrig": 2500,
+                "oldbalanceDest": 10000,
+                "newbalanceDest": 12500,
+                "type": "TRANSFER"
+            }
+        }
+
 
 
 class PredictionResponse(BaseModel):

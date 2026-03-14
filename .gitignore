@@ -10,5 +10,7 @@ venv/
 .vscode/
 
 logs/
-models/
-training/
+
+training/data.csv
+data/
+*.csv
